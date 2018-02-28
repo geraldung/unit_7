@@ -1,6 +1,6 @@
 /* GET 'home' page */
 module.exports.classList = function(req, res) {
-res.render('index', { title: 'Home' });
+res.render('drugs-list', { title: 'Home' });
 };
 
 /* GET 'Location info' page */
