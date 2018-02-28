@@ -1,0 +1,21 @@
+https://nameless-sierra-39744.herokuapp.com
+
+Gerald Ung [10718757]
+
+Reflection:
+* In order to create this application I used two different environments
+   1. Linux Mint Machine
+   2. Mas OSX Machine
+
+* I was able to get the application up and running in the same manner as that of the
+  text book on my Mac OSX but was not able to get it working properly on my Linux
+  machine.
+
+* I created a repository on both Heroku and GitHub that I will continually update
+  both repositories.
+
+* It was easier to find installation and helpful instructions relating to my Mac than
+  my Linux machine
+
+* More than likely I will be using my Mac to code anything associated with bootstrap,
+  NodeJS, AngularJS, and ExpressJs.

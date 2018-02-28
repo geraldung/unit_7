@@ -1,7 +1,13 @@
 var express = require('express');
 var router = express.Router();
-var ctrlMain = require('../controllers/main');
+var ctrlClasses = require('../controllers/classes');
+var ctrlOthers = require('../controllers/others');
 
-/* GET home page. */
-router.get('/', ctrlMain.index);
+/* Classes pages */
+router.get('/', ctrlClasses.classList);
+router.get('/class', ctrlClasses.classInfo);
+router.get('/class/review/new', ctrlClasses.addMaterial);
+
+/* Other pages */
+router.get('/about', ctrlOthers.about);
 module.exports = router;
