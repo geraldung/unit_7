@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  .row.page-header
+    .col-lg-12
+      h1 CSCI 400: Programming Languages
+  .row
+    .col-xs-12.col-md-9
+      .row
+        .col-xs-12.col-sm-6
+          P INSTRUCTOR; Jack Rosenthal
+          p LOCATION: Berthoud 243
+          p CREDITS: 3.0
+          a.btn.btn-default(href='/classes/add_assignment/new') Add Assignment
+      .panel-body.review-container
+        .row
+          .review
+            .well.well-sm.review-header
+              span.assignmentTitle LGA 01
+            .col-xs-12
+              p DUE: 16 January 2018
+              p POINTS: 10
+              p STATUS: Submitted
+        .row
+          .review
+            .well.well-sm.review-header
+              span.assignmentTitle LGA 02
+            .col-xs-12
+              p DUE: 18 January 2018
+              p POINTS: 10
+              p STATUS: Submitted

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  #banner.page-header
+    .row
+      .col-lg-6
+        h1 Course Organizer
+          small &nbsp;Helping you get that 4.0!
+  .row
+    .col-xs-12.col-sm-8
+      .row.list-group
+        .col-xs-12.list-group-item
+          h4
+            a(href="/classes") CSCI 400: Programming Languages
+            small &nbsp;
+          p.address= classes.address
