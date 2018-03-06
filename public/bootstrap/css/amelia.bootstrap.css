@@ -27,6 +27,13 @@ summary {
   display: block;
 }
 
+footer {
+  text-align: center;
+  background-color: #191970;
+  color: #FFFFFF;
+  width: 100%;
+}
+
 audio,
 canvas,
 video {
@@ -5781,7 +5788,7 @@ a.list-group-item:focus {
 
 .panel-footer {
   padding: 10px 15px;
-  background-color: #18cbd8;
+  background-color: #000000;
   border-top: 1px solid #FFFFFF;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
@@ -5810,7 +5817,7 @@ a.list-group-item:focus {
 }
 
 .panel-group .panel-footer + .panel-collapse .panel-body {
-  border-bottom: 1px solid #FFFFFF;
+  border-bottom: 1px solid #000000;
 }
 
 .panel-default {
@@ -5828,7 +5835,7 @@ a.list-group-item:focus {
 }
 
 .panel-default > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #FFFFFF;
+  border-bottom-color: #000000;
 }
 
 .panel-primary {
@@ -5846,7 +5853,7 @@ a.list-group-item:focus {
 }
 
 .panel-primary > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #ad1d28;
+  border-bottom-color: #000000;
 }
 
 .panel-success {
@@ -5864,7 +5871,7 @@ a.list-group-item:focus {
 }
 
 .panel-success > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #55b932;
+  border-bottom-color: #000000;
 }
 
 .panel-warning {
@@ -5882,7 +5889,7 @@ a.list-group-item:focus {
 }
 
 .panel-warning > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #d59521;
+  border-bottom-color: #000000;
 }
 
 .panel-danger {
@@ -5900,7 +5907,7 @@ a.list-group-item:focus {
 }
 
 .panel-danger > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #d2491c;
+  border-bottom-color: #000000;
 }
 
 .panel-info {
@@ -5918,7 +5925,7 @@ a.list-group-item:focus {
 }
 
 .panel-info > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #352f65;
+  border-bottom-color: #000000;
 }
 
 .well {
