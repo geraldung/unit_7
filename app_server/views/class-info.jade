@@ -1,31 +1,41 @@
 extends layout
 
+include _includes/sharedHTMLfunctions
+
 block content
-  .row.page-header
-    .col-lg-12
-      h1 CSCI 400: Programming Languages
+  .row.page-header: .col-lg-12
+      h1= pageHeader.title
   .row
     .col-xs-12.col-md-9
       .row
         .col-xs-12.col-sm-6
-          P INSTRUCTOR; Jack Rosenthal
-          p LOCATION: Berthoud 243
-          p CREDITS: 3.0
-          a.btn.btn-default(href='/classes/add_assignment/new') Add Assignment
-      .panel-body.review-container
-        .row
-          .review
-            .well.well-sm.review-header
-              span.assignmentTitle LGA 01
-            .col-xs-12
-              p DUE: 16 January 2018
-              p POINTS: 10
-              p STATUS: Submitted
-        .row
-          .review
-            .well.well-sm.review-header
-              span.assignmentTitle LGA 02
-            .col-xs-12
-              p DUE: 18 January 2018
-              p POINTS: 10
-              p STATUS: Submitted
+          .panel.panel-primary
+            .panel-heading
+              h2.panel-title Course Information
+            .panel-body
+              P= location.instructor
+              p= location.address
+              p= location.credits
+              P= location.office
+              p= location.time 
+      .row
+        .col-xs-12.col-sm-6
+          a.btn.btn-default.pull-left(href="/class/add_assignment/new") Add Assignment
+      .row
+      .row
+        .col-xs-12
+          .panel.panel-primary.review-panel
+            .panel-heading
+              h2.panel-title LGA 01
+            .panel-body.review-container
+            p Due: January 16 2018
+            p Points: 10 / 10 
+            p Status: Submitted
+        .col-xs-12
+          .panel.panel-primary.review-panel
+            .panel-heading
+              h2.panel-title LGA 02
+            .panel-body.review-container
+            p Due: January 18 2018
+            p Points: 10 / 10 
+            p Status: Submitted

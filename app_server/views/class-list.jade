@@ -1,21 +1,22 @@
 extends layout
 
+include _includes/sharedHTMLfunctions
+
 block content
   #banner.page-header
     .row
       .col-lg-6
-        h1 Course Organizer
-          small &nbsp;Helping you get that 4.0!
+        h1= pageHeader.title
+         small &nbsp;#{pageHeader.strapline}
   .row
     .col-xs-12.col-sm-8
       .row.list-group
-        .col-xs-12.list-group-item
-          h4
-            a(href="/classes") CSCI 400: Programming Languages
-            small &nbsp;
-          p.address Berthoud 243
-        .col-xs-12.list-group-item
-          h4
-            a CSCI 440: Parallel Programming
-            small &nbsp;
-          p.address Marquez 226
+        each location in locations
+          .col-xs-12.list-group-item
+            h4 
+              a(href="/class")= location.name
+              small &nbsp;
+              span.badge.pull-right.badge-default= location.distance
+            p.address= location.address
+    .col-xs-12.col-sm-4 
+      p.lead= sidebar

@@ -1,10 +1,11 @@
 var express = require('express');
 var router = express.Router();
-var ctrlClasses = require('../controllers/classes');
+var ctrlLocations = require('../controllers/locations');
+var ctrlOthers = require('../controllers/others');
 
-/* Classes pages */
-router.get('/', ctrlClasses.classList);
-router.get('/classes', ctrlClasses.classInfo);
-router.get('/classes/add_assignment/new', ctrlClasses.addAssignment);
+/* Locations pages */
+router.get('/', ctrlLocations.homelist);
+router.get('/class', ctrlLocations.locationInfo);
+router.get('/class/add_assignment/new', ctrlLocations.addReview);
 
 module.exports = router;
