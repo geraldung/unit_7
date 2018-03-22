@@ -1,6 +1,9 @@
 var mongoose = require( 'mongoose' );
 var gracefulShutdown;
 var dbURI = 'mongodb://localhost/Loc8r';
+if (process.env.NODE_ENV === 'production') {
+  dbURI = 'mongodb://csci446:connected@ds012538.mlab.com:12538/courseorganizer'
+}
 mongoose.connect(dbURI, { useMongoClient: true })
 
 mongoose.connection.on('connected', function () {
