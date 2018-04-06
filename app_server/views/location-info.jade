@@ -1,0 +1,45 @@
+extends layout
+
+include _includes/sharedHTMLfunctions
+
+block content
+  .row.page-header: .col-lg-12
+      h1= pageHeader.title
+  .row
+    .col-xs-12.col-md-9
+      .row
+        .col-xs-12.col-sm-6
+          p= location.address
+          .panel.panel-primary
+            .panel-heading
+              h2.panel-title Class Information
+            .panel-body
+              p Instructor: #{location.instructor}
+              p Credit Hours: #{location.credits}
+              p Class Meeting Time:
+              each time in location.openingTimes
+                p
+                  | #{time.days} : 
+                  if time.closed
+                    | closed
+                  else
+                    | #{time.opening} - #{time.closing}
+      .row
+        .col-xs-12
+          .panel.panel-primary.review-panel
+            .panel-heading
+              h2.panel-title Assignments:
+            .panel-body.review-container
+              each review in location.reviews
+                .row
+                  .review
+                    .well.well-sm.review-header
+                      span.rating
+                        +outputRating(review.rating)
+                      span.reviewTitle #{review.title}
+                      span.reviewStatus.pull-right Status: #{review.status}
+                    .col-xs-12
+                      p Due: !{(review.reviewText).replace(/\n/g, '<br/>')}
+                      p Points: #{review.points}
+    .col-xs-12.col-md-3
+      a.btn.btn-default.pull-right(href="/location/assignment/new") Add Assignment

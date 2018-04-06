@@ -1,5 +1,38 @@
-.review {padding-bottom: 5px;}
-.panel-body.review-container {padding-top: 0;}
-.review-header {margin-bottom: 10px;}
-.reviewAuthor {margin: 0 5px;}
-.reviewTimestamp {color: #ccc;}
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.content {
+	padding-top: 50px;
+	padding-bottom: 128px;
+}
+
+.navbar {
+	background-color: GRAY;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.footer {
+	background-color: GRAY;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+.footer-img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+}
+
+.list-group-item {
+	background-color: Azure;
+}
