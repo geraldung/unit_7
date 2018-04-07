@@ -9,14 +9,13 @@ block content
     .col-xs-12.col-md-9
       .row
         .col-xs-12.col-sm-6
-          p= location.address
           .panel.panel-primary
             .panel-heading
-              h2.panel-title Class Information
+              h2.panel-title Course Information:
             .panel-body
               p Instructor: #{location.instructor}
+              p Location: #{location.address}
               p Credit Hours: #{location.credits}
-              p Class Meeting Time:
               each time in location.openingTimes
                 p
                   | #{time.days} : 
@@ -28,18 +27,16 @@ block content
         .col-xs-12
           .panel.panel-primary.review-panel
             .panel-heading
-              h2.panel-title Assignments:
+              h2.panel-title Customer reviews
             .panel-body.review-container
               each review in location.reviews
                 .row
                   .review
                     .well.well-sm.review-header
-                      span.rating
-                        +outputRating(review.rating)
-                      span.reviewTitle #{review.title}
-                      span.reviewStatus.pull-right Status: #{review.status}
+                      span.reviewAuthor #{review.title}
+                      small.reviewTimestamp.pull-right Status: #{review.status}
                     .col-xs-12
-                      p Due: !{(review.reviewText).replace(/\n/g, '<br/>')}
+                      p !{(review.dueDate).replace(/\n/g, '<br/>')}
                       p Points: #{review.points}
-    .col-xs-12.col-md-3
-      a.btn.btn-default.pull-right(href="/location/assignment/new") Add Assignment
+        .col-xs-12
+          a.btn.btn-default.pull-right(href="/location/review/new") Add Assignment
